@@ -1,6 +1,0 @@
-yapf
-tqdm
-scikit-learn
-pandas
-jupyterthemes
-jupyter_contrib_nbextensions
