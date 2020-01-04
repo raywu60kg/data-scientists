@@ -28,8 +28,7 @@ RUN /bin/sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/
 
 # zsh theme
 RUN wget https://raw.githubusercontent.com/caiogondim/bullet-train.zsh/master/bullet-train.zsh-theme .; mv bullet-train.zsh-theme ~/.oh-my-zsh/themes
-RUN wget https://raw.githubusercontent.com/raywu60kg//data-scientists/master/.zshrc .; mv -f .zshrc ~/.oh-my-zsh/themes
-
+RUN wget https://raw.githubusercontent.com/raywu60kg/data-scientists/master/.zshrc .; mv -f .zshrc ~/.zshrc
 # clean up
 RUN apt-get clean
 
