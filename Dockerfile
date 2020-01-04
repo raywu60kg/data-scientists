@@ -1,7 +1,7 @@
 FROM tensorflow/tensorflow:1.14.0-py3-jupyter
 WORKDIR /usr/src/app
 RUN apt-get update 
-RUN apt-get install -yqq vim git wget
+RUN apt-get install -yqq git wget curl
 
 # python packages
 RUN pip install --upgrade pip
@@ -29,6 +29,15 @@ RUN /bin/sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/
 # zsh theme
 RUN wget https://raw.githubusercontent.com/caiogondim/bullet-train.zsh/master/bullet-train.zsh-theme .; mv bullet-train.zsh-theme ~/.oh-my-zsh/themes
 RUN wget https://raw.githubusercontent.com/raywu60kg/data-scientists/master/.zshrc .; mv -f .zshrc ~/.zshrc
+
+# vim 
+RUN apt-get install -yqq vim 
+RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+RUN apt-get install silversearcher-ag
+RUN wget https://raw.githubusercontent.com/jneo8/vim_settings/master/vimrc .; mv -f vimrc ~/.vimrc
+
 # clean up
 RUN apt-get clean
+
+
 
