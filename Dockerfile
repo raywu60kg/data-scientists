@@ -27,8 +27,8 @@ RUN apt-get install -yqq zsh
 RUN /bin/sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 # zsh theme
-RUN wget https://raw.githubusercontent.com/halfo/lambda-mod-zsh-theme/master/lambda-mod.zsh-theme .; cp lambda-mod.zsh-theme ~/.oh-my-zsh/themes; rm -f lambda-mod.zsh-theme
-RUN sed -e '11c/ZSH_THEME="lambda-mod"' ~/.zshrc 
+RUN wget https://raw.githubusercontent.com/caiogondim/bullet-train.zsh/master/bullet-train.zsh-theme .; mv bullet-train.zsh-theme ~/.oh-my-zsh/themes
+RUN wget https://raw.githubusercontent.com/raywu60kg//data-scientists/master/.zshrc .; mv -f .zshrc ~/.oh-my-zsh/themes
 
 # clean up
 RUN apt-get clean
