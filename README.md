@@ -30,18 +30,23 @@ docker run --rm -it -v $(pwd):/usr/src/app -p 8888:8888 raywu60kg/data-scientist
 ```
 and we can turn on jupyter anytime we want by `activateJupyter`
 
+### Tensorflow or Pytorch versions
+We can have specific tensorflow or pytorch version by asign the tag name. For example:
+```
+docker run --rm -it -v $(pwd):/usr/src/app -p 8888:8888 raywu60kg/data-scientists:tf-1.14.0 activateJupyter  
+```
+
 # Note 
-1. When the first time we use vim we need to 
+1. When the first time we use vim we need to install vim plugins by
 ```
 :PlugInstall
 ```
-to install vim plugins.
 
 
-2. When we use zsh and vim, some icons might not be shown. we might need to install powerline by 
+2. When we use zsh and vim, some icons might not be shown. We might need to install powerline on your local machine. by 
 ```
 sudo apt-get install powerline
 ```
-on your local machine.
+
 
 3. Strongly recommend to use the following Nbextension: `Autopep8`, `Hinterland` and `Table of Contents(2)`
