@@ -15,8 +15,9 @@ RUN pip install jupyter_contrib_nbextensions
 RUN pip install autopep8
 RUN jupyter contrib nbextension install 
 RUN jt -t oceans16  -T -N
-RUN jupyter nbextension install https://github.com/kenkoooo/jupyter-autopep8/archive/master.zip --user
-RUN jupyter nbextension enable jupyter-autopep8-master/jupyter-autopep8
+RUN jupyter nbextension enable code_prettify/autopep8 --sys-prefix
+RUN jupyter nbextension enable hinterland/hinterland --sys-prefix
+RUN jupyter nbextension enable toc2/main --sys-prefix
 RUN touch /bin/activateJupyter
 RUN echo '#!/bin/bash' >> /bin/activateJupyter
 RUN echo 'jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root' >> /bin/activateJupyter
@@ -38,6 +39,7 @@ RUN apt-get install -yqq vim
 RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 RUN apt-get install silversearcher-ag
 RUN wget https://raw.githubusercontent.com/jneo8/vim_settings/master/vimrc .; mv -f vimrc ~/.vimrc
+RUN vim +'PlugInstall --sync' +qa
 
 # clean up
 RUN apt-get clean
