@@ -1,5 +1,5 @@
 # Summary
-See my [Docker hub](https://hub.docker.com/repository/docker/raywu60kg/data-scientists).
+See my [Docker hub](https://hub.docker.com/r/raywu60kg/data-scientists).
 This is a simple docker image for data scientists for sometimes we need to work remotely.
 
 # Environment
