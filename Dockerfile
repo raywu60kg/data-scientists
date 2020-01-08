@@ -8,6 +8,7 @@ RUN pip install --upgrade pip
 RUN pip install tqdm 
 RUN pip install scikit-learn 
 RUN pip install pandas 
+RUN pip install matplotlib
 
 # jupyter config
 RUN pip install jupyterthemes 
