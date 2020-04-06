@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:2.0.0-py3-jupyter
+FROM tensorflow/tensorflow:2.1.0-py3-jupyter
 WORKDIR /usr/src/app
 RUN apt-get update 
 RUN apt-get install -yqq git wget curl
