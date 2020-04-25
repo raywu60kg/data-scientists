@@ -42,7 +42,7 @@ RUN apt-get install silversearcher-ag
 RUN wget https://raw.githubusercontent.com/jneo8/vim_settings/master/vimrc .; mv -f vimrc ~/.vimrc
 
 # pytorch
-RUN pip install torch==1.3.1+cpu torchvision==0.4.2+cpu -f https://download.pytorch.org/whl/torch_stable.html
+RUN pip install torch==1.5.0+cpu torchvision==0.6.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
 
 # clean up
 RUN apt-get clean
