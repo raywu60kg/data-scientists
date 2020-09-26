@@ -44,5 +44,9 @@ RUN wget https://raw.githubusercontent.com/jneo8/vim_settings/master/vimrc .; mv
 # clean up
 RUN apt-get clean
 
-
+# add tini
+ENV TINI_VERSION v0.19.0
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
+RUN chmod +x /tini
+ENTRYPOINT ["/tini", "--"]
 
